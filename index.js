@@ -248,11 +248,17 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function listOfNames(tArray)
+{
+  const tempArray = [];
+  for ( let i = 0; i < tArray.length; i += 1)
+  {
+    tempArray.push(tArray[i].name);
+  }
+  return tempArray;
 }
 
-
+console.log(listOfNames(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -263,11 +269,24 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(tArray, tIndex) {
+  const tempArray = [];
+  for ( let i = 0; i < tArray.length; i += 1)
+  {
+    
+    if (i === tIndex)
+    {
+      console.log("Artist Found - Skipping");
+    }
+    else
+    {
+      tempArray.push(tArray[i]);
+    }
+  }
+  return tempArray;
 }
 
-
+const t5Array = removeArtist(artists, 0);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
